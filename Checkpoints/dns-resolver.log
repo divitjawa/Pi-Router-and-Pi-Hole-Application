@@ -1,0 +1,184 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20210306045213
+Username: DIVITS-LAPTOP\divit
+RunAs User: DIVITS-LAPTOP\divit
+Configuration Name: 
+Machine: DIVITS-LAPTOP (Microsoft Windows NT 10.0.18363.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 25724
+PSVersion: 5.1.18362.1171
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.18362.1171
+BuildVersion: 10.0.18362.1171
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is dns-resolver.log
+PS C:\WINDOWS\system32> ipconfig /all
+
+Windows IP Configuration
+
+   Host Name . . . . . . . . . . . . : Divits-Laptop
+   Primary Dns Suffix  . . . . . . . :
+   Node Type . . . . . . . . . . . . : Hybrid
+   IP Routing Enabled. . . . . . . . : No
+   WINS Proxy Enabled. . . . . . . . : No
+
+Ethernet adapter VirtualBox Host-Only Network:
+
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : VirtualBox Host-Only Ethernet Adapter
+   Physical Address. . . . . . . . . : 0A-00-27-00-00-0E
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+   Link-local IPv6 Address . . . . . : fe80::41cd:c982:276b:b363%14(Preferred)
+   IPv4 Address. . . . . . . . . . . : 192.168.56.1(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . :
+   DHCPv6 IAID . . . . . . . . . . . : 671744039
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-26-7A-22-9C-DC-71-96-CC-EC-7D
+   DNS Servers . . . . . . . . . . . : fec0:0:0:ffff::1%1
+                                       fec0:0:0:ffff::2%1
+                                       fec0:0:0:ffff::3%1
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+Wireless LAN adapter Local Area Connection* 3:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Microsoft Wi-Fi Direct Virtual Adapter #3
+   Physical Address. . . . . . . . . : DC-71-96-CC-EC-7E
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+Wireless LAN adapter Local Area Connection* 4:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Microsoft Wi-Fi Direct Virtual Adapter #4
+   Physical Address. . . . . . . . . : DE-71-96-CC-EC-7D
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+Ethernet adapter Ethernet 3:
+
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : TP-LINK Gigabit Ethernet USB Adapter
+   Physical Address. . . . . . . . . : 60-32-B1-45-14-17
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+   Link-local IPv6 Address . . . . . : fe80::f8fc:4f11:de1a:ac66%10(Preferred)
+   IPv4 Address. . . . . . . . . . . : 192.168.174.23(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.255.128
+   Lease Obtained. . . . . . . . . . : Saturday, March 6, 2021 4:41:07 AM
+   Lease Expires . . . . . . . . . . : Saturday, March 6, 2021 5:01:17 AM
+   Default Gateway . . . . . . . . . : 192.168.174.1
+   DHCP Server . . . . . . . . . . . : 192.168.174.1
+   DHCPv6 IAID . . . . . . . . . . . : 945828529
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-26-7A-22-9C-DC-71-96-CC-EC-7D
+   DNS Servers . . . . . . . . . . . : 192.168.174.80
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+Wireless LAN adapter Wi-Fi:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : hsd1.wa.comcast.net
+   Description . . . . . . . . . . . : Killer(R) Wi-Fi 6 AX1650x 160MHz Wireless Network Adapter (200NGW)
+   Physical Address. . . . . . . . . : DC-71-96-CC-EC-7D
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+Ethernet adapter Bluetooth Network Connection:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Bluetooth Device (Personal Area Network)
+   Physical Address. . . . . . . . . : DC-71-96-CC-EC-81
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+PS C:\WINDOWS\system32> ping 1.1.1.1
+
+Pinging 1.1.1.1 with 32 bytes of data:
+Reply from 1.1.1.1: bytes=32 time=366ms TTL=56
+Reply from 1.1.1.1: bytes=32 time=28ms TTL=56
+Reply from 1.1.1.1: bytes=32 time=18ms TTL=56
+Reply from 1.1.1.1: bytes=32 time=17ms TTL=56
+
+Ping statistics for 1.1.1.1:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 17ms, Maximum = 366ms, Average = 107ms
+PS C:\WINDOWS\system32> ping google.com
+
+Pinging google.com [216.58.193.78] with 32 bytes of data:
+Reply from 216.58.193.78: bytes=32 time=102ms TTL=115
+Reply from 216.58.193.78: bytes=32 time=24ms TTL=115
+Reply from 216.58.193.78: bytes=32 time=19ms TTL=115
+Reply from 216.58.193.78: bytes=32 time=19ms TTL=115
+
+Ping statistics for 216.58.193.78:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 19ms, Maximum = 102ms, Average = 41ms
+PS C:\WINDOWS\system32> dig uw.edu
+dig : The term 'dig' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the 
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ dig uw.edu
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (dig:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+dig : The term 'dig' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ dig uw.edu
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (dig:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\WINDOWS\system32> Resolve-DnsName uw.edu
+
+Name                                           Type   TTL   Section    IPAddress
+----                                           ----   ---   -------    ---------
+uw.edu                                         A      30    Answer     128.95.155.134
+uw.edu                                         A      30    Answer     128.95.155.197
+uw.edu                                         A      30    Answer     54.214.77.106
+uw.edu                                         A      30    Answer     128.95.155.198
+uw.edu                                         A      30    Answer     128.95.155.135
+
+Name      : uw.edu
+QueryType : NS
+TTL       : 35351
+Section   : Authority
+NameHost  : holly.s.uw.edu
+
+
+Name      : uw.edu
+QueryType : NS
+TTL       : 35351
+Section   : Authority
+NameHost  : hanna.cac.washington.edu
+
+
+Name      : uw.edu
+QueryType : NS
+TTL       : 35351
+Section   : Authority
+NameHost  : marge.cac.washington.edu
+
+hanna.cac.washington.edu                       A      35351 Additional 140.142.5.5
+holly.s.uw.edu                                 A      35351 Additional 173.250.227.69
+marge.cac.washington.edu                       A      35351 Additional 140.142.5.13
+hanna.cac.washington.edu                       AAAA   35351 Additional 2607:4000:200:42::5
+holly.s.uw.edu                                 AAAA   35351 Additional 2607:4000:301:1::69
+marge.cac.washington.edu                       AAAA   35351 Additional 2607:4000:200:43::13
+
+
+PS C:\WINDOWS\system32> stop-transcript
+**********************
+Windows PowerShell transcript end
+End time: 20210306045435
+**********************

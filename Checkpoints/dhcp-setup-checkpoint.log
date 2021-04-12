@@ -1,0 +1,170 @@
+Script started on 2021-02-16 16:54:58-08:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="151" LINES="50"]
+]0;pi@divitj: ~[01;32mpi@divitj[00m:[01;34m~ $[00m ip addr show eth0
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether b8:27:eb:a2:a7:f5 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.174.5/25 brd 192.168.174.127 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::ba27:ebff:fea2:a7f5/64 scope link 
+       valid_lft forever preferred_lft forever
+]0;pi@divitj: ~[01;32mpi@divitj[00m:[01;34m~ $[00m ping 1.1.1.1
+PING 1.1.1.1 (1.1.1.1) 56(84) bytes of data.
+64 bytes from 1.1.1.1: icmp_seq=1 ttl=57 time=24.8 ms
+64 bytes from 1.1.1.1: icmp_seq=2 ttl=57 time=18.1 ms
+64 bytes from 1.1.1.1: icmp_seq=3 ttl=57 time=18.10 ms
+64 bytes from 1.1.1.1: icmp_seq=4 ttl=57 time=23.2 ms
+64 bytes from 1.1.1.1: icmp_seq=5 ttl=57 time=18.4 ms
+64 bytes from 1.1.1.1: icmp_seq=6 ttl=57 time=21.2 ms
+64 bytes from 1.1.1.1: icmp_seq=7 ttl=57 time=23.9 ms
+64 bytes from 1.1.1.1: icmp_seq=8 ttl=57 time=17.9 ms
+64 bytes from 1.1.1.1: icmp_seq=9 ttl=57 time=16.7 ms
+64 bytes from 1.1.1.1: icmp_seq=10 ttl=57 time=20.8 ms
+64 bytes from 1.1.1.1: icmp_seq=11 ttl=57 time=16.7 ms
+64 bytes from 1.1.1.1: icmp_seq=12 ttl=57 time=17.4 ms
+64 bytes from 1.1.1.1: icmp_seq=13 ttl=57 time=20.8 ms
+64 bytes from 1.1.1.1: icmp_seq=14 ttl=57 time=16.8 ms
+^C
+--- 1.1.1.1 ping statistics ---
+14 packets transmitted, 14 received, 0% packet loss, time 33ms
+rtt min/avg/max/mdev = 16.719/19.703/24.830/2.678 ms
+]0;pi@divitj: ~[01;32mpi@divitj[00m:[01;34m~ $[00m systemctl status isc-dhcp-server
+[?1h=[0;1;32m●[0m isc-dhcp-server.service - LSB: DHCP server[m
+   Loaded: loaded (/etc/init.d/isc-dhcp-server; generated)[m
+   Active: [0;1;32mactive (running)[0m since Tue 2021-02-16 16:13:41 PST; 41min ago[m
+     Docs: man:systemd-sysv-generator(8)[m
+  Process: 500 ExecStart=/etc/init.d/isc-dhcp-server start (code=exited, status=0/SUCCESS)[m
+    Tasks: 1 (limit: 2063)[m
+   CGroup: /system.slice/isc-dhcp-server.service[m
+           └─512 /usr/sbin/dhcpd -4 -q -cf /etc/dhcp/dhcpd.conf eth0[m
+[m
+Feb 16 16:32:21 divitj dhcpd[512]: DHCPREQUEST for 192.168.174.23 from 60:32:b1:45:14:17 (Divits-Laptop) via eth0[m
+Feb 16 16:32:21 divitj dhcpd[512]: DHCPACK on 192.168.174.23 to 60:32:b1:45:14:17 (Divits-Laptop) via eth0[m
+Feb 16 16:37:31 divitj dhcpd[512]: DHCPREQUEST for 192.168.174.23 from 60:32:b1:45:14:17 (Divits-Laptop) via eth0[m
+Feb 16 16:37:31 divitj dhcpd[512]: DHCPACK on 192.168.174.23 to 60:32:b1:45:14:17 (Divits-Laptop) via eth0[m
+Feb 16 16:42:41 divitj dhcpd[512]: DHCPREQUEST for 192.168.174.23 from 60:32:b1:45:14:17 (Divits-Laptop) via eth0[m
+Feb 16 16:42:41 divitj dhcpd[512]: DHCPACK on 192.168.174.23 to 60:32:b1:45:14:17 (Divits-Laptop) via eth0[m
+Feb 16 16:47:52 divitj dhcpd[512]: DHCPREQUEST for 192.168.174.23 from 60:32:b1:45:14:17 (Divits-Laptop) via eth0[m
+Feb 16 16:47:52 divitj dhcpd[512]: DHCPACK on 192.168.174.23 to 60:32:b1:45:14:17 (Divits-Laptop) via eth0[m
+Feb 16 16:53:02 divitj dhcpd[512]: DHCPREQUEST for 192.168.174.23 from 60:32:b1:45:14:17 (Divits-Laptop) via eth0[m
+Feb 16 16:53:02 divitj dhcpd[512]: DHCPACK on 192.168.174.23 to 60:32:b1:45:14:17 (Divits-Laptop) via eth0[m
+[K[?1l>]0;pi@divitj: ~[01;32mpi@divitj[00m:[01;34m~ $[00m cat /var/lib/dhcp/dhcpd.leases
+# The format of this file is documented in the dhcpd.leases(5) manual page.
+# This lease file was written by isc-dhcp-4.4.1
+
+# authoring-byte-order entry is generated, DO NOT DELETE
+authoring-byte-order little-endian;
+
+lease 192.168.174.23 {
+  starts 3 2021/02/17 00:11:32;
+  ends 3 2021/02/17 00:21:32;
+  tstp 3 2021/02/17 00:21:32;
+  cltt 3 2021/02/17 00:11:32;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 60:32:b1:45:14:17;
+  uid "\001`2\261E\024\027";
+  set vendor-class-identifier = "MSFT 5.0";
+  client-hostname "Divits-Laptop";
+}
+server-duid "\000\001\000\001'\277\033\255\270'\353\242\247\365";
+
+lease 192.168.174.23 {
+  starts 3 2021/02/17 00:16:42;
+  ends 3 2021/02/17 00:26:42;
+  cltt 3 2021/02/17 00:16:42;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 60:32:b1:45:14:17;
+  uid "\001`2\261E\024\027";
+  set vendor-class-identifier = "MSFT 5.0";
+  client-hostname "Divits-Laptop";
+}
+lease 192.168.174.23 {
+  starts 3 2021/02/17 00:21:56;
+  ends 3 2021/02/17 00:31:56;
+  cltt 3 2021/02/17 00:21:56;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 60:32:b1:45:14:17;
+  uid "\001`2\261E\024\027";
+  set vendor-class-identifier = "MSFT 5.0";
+  client-hostname "Divits-Laptop";
+}
+lease 192.168.174.23 {
+  starts 3 2021/02/17 00:27:06;
+  ends 3 2021/02/17 00:37:06;
+  cltt 3 2021/02/17 00:27:06;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 60:32:b1:45:14:17;
+  uid "\001`2\261E\024\027";
+  set vendor-class-identifier = "MSFT 5.0";
+  client-hostname "Divits-Laptop";
+}
+lease 192.168.174.23 {
+  starts 3 2021/02/17 00:32:21;
+  ends 3 2021/02/17 00:42:21;
+  cltt 3 2021/02/17 00:32:21;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 60:32:b1:45:14:17;
+  uid "\001`2\261E\024\027";
+  set vendor-class-identifier = "MSFT 5.0";
+  client-hostname "Divits-Laptop";
+}
+lease 192.168.174.23 {
+  starts 3 2021/02/17 00:37:31;
+  ends 3 2021/02/17 00:47:31;
+  cltt 3 2021/02/17 00:37:31;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 60:32:b1:45:14:17;
+  uid "\001`2\261E\024\027";
+  set vendor-class-identifier = "MSFT 5.0";
+  client-hostname "Divits-Laptop";
+}
+lease 192.168.174.23 {
+  starts 3 2021/02/17 00:42:41;
+  ends 3 2021/02/17 00:52:41;
+  cltt 3 2021/02/17 00:42:41;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 60:32:b1:45:14:17;
+  uid "\001`2\261E\024\027";
+  set vendor-class-identifier = "MSFT 5.0";
+  client-hostname "Divits-Laptop";
+}
+lease 192.168.174.23 {
+  starts 3 2021/02/17 00:47:52;
+  ends 3 2021/02/17 00:57:52;
+  cltt 3 2021/02/17 00:47:52;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 60:32:b1:45:14:17;
+  uid "\001`2\261E\024\027";
+  set vendor-class-identifier = "MSFT 5.0";
+  client-hostname "Divits-Laptop";
+}
+lease 192.168.174.23 {
+  starts 3 2021/02/17 00:53:02;
+  ends 3 2021/02/17 01:03:02;
+  cltt 3 2021/02/17 00:53:02;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 60:32:b1:45:14:17;
+  uid "\001`2\261E\024\027";
+  set vendor-class-identifier = "MSFT 5.0";
+  client-hostname "Divits-Laptop";
+}
+]0;pi@divitj: ~[01;32mpi@divitj[00m:[01;34m~ $[00m exit
+exit
+
+Script done on 2021-02-16 16:55:54-08:00 [COMMAND_EXIT_CODE="0"]

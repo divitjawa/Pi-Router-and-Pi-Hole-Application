@@ -1,0 +1,16 @@
+# We only want to match the eth0 wired ethernet interface:
+
+[Match]
+Name=eth0
+
+# Here we define the static IPv4 address of the RPi that you 
+# selected in your LAN Plan. It is written in CIDR notation.
+# 10.10.10.5/25 is only an example. Replace it with the IP
+# you selected for your RPi in your plan:
+
+[Network]
+Address=192.168.174.1/25
+Address=192.168.174.80/25
+
+# Enable link local addresses for IPv6 (FE80::) - this is important
+LinkLocalAddressing=ipv6
