@@ -86,9 +86,9 @@ Install the application by running this command in your Pi's terminal window: `c
 
 Here, we will install a recursive DNS server. However, this time we will not use BIND, instead, we'll use Unbound. It is the recommended DNS server for the Pi-Hole application. Install it using the command `sudo apt install unbound`. Configure the DNS server by `sudo nano /etc/unbound/unbound.conf.d/pi-hole.conf`. 
 
-![image-20210412052126021](C:\Users\divit\AppData\Roaming\Typora\typora-user-images\image-20210412052126021.png)
+![image-20210412052126021](C:\Users\divit\Desktop\Senior Year\Pi-Router-and-Pi-Hole-Application\assets\image-20210412052126021.png)
 
-![image-20210412052147874](C:\Users\divit\AppData\Roaming\Typora\typora-user-images\image-20210412052147874.png)
+![image-20210412052147874](C:\Users\divit\Desktop\Senior Year\Pi-Router-and-Pi-Hole-Application\assets\image-20210412052147874.png)
 
 Restart unbound using `sudo service unbound restart`.
 
@@ -102,10 +102,10 @@ For **Mac OS**, Apple Menu -> Sys. Pref. -> Network -> locate your connection(Wi
 
 Here are some screenshots of the Pi-Hole working for me.
 
-![image-20210311201255996](file://C:/Users/divit/AppData/Roaming/Typora/typora-user-images/image-20210311201255996.png?lastModify=1618230496)
+![image-20210311201255996](file://C:\Users\divit\Desktop\Senior Year\Pi-Router-and-Pi-Hole-Application\assets/image-20210311201255996.png?lastModify=1618230496)
 
-![image-20210311201506830](file://C:\Users\divit\AppData\Roaming\Typora\typora-user-images\image-20210311201506830.png?lastModify=1618230509)
+![image-20210311201506830](file://C:\Users\divit\Desktop\Senior Year\Pi-Router-and-Pi-Hole-Application\assets\image-20210311201506830.png?lastModify=1618230509)
 
 Screenshot from within the Pi:
 
-![image-20210311201519346](file://C:\Users\divit\AppData\Roaming\Typora\typora-user-images\image-20210311201519346.png?lastModify=1618230523)
+![image-20210311201519346](file://C:\Users\divit\Desktop\Senior Year\Pi-Router-and-Pi-Hole-Application\assets\image-20210311201519346.png?lastModify=1618230523)
