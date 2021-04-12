@@ -102,7 +102,7 @@ For **Mac OS**, Apple Menu -> Sys. Pref. -> Network -> locate your connection(Wi
 
 Here are some screenshots of the Pi-Hole working for me.
 
-![image-20210311201255996](file://C:\Users\divit\Desktop\Senior Year\Pi-Router-and-Pi-Hole-Application\assets/image-20210311201255996.png)
+![image-20210311201255996](https://github.com/divitjawa/Pi-Router-and-Pi-Hole-Application/blob/main/assets/image-20210311201255996.png)
 
 ![image-20210311201506830](file://C:\Users\divit\Desktop\Senior Year\Pi-Router-and-Pi-Hole-Application\assets\image-20210311201506830.png)
 
