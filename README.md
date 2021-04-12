@@ -35,7 +35,7 @@ To apply these change, run the command `wpa_cli -i wlan0 reconfigure`.
 - 192.168.0.0/24
 - 192.168.1.0/24
 
-I created address planning using subnet prefix 25(CIDR/25), and it supports a minimum of 15 hosts. LAN planning for my project can be found **here**.
+I created address planning using subnet prefix 25(CIDR/25), and it supports a minimum of 15 hosts. LAN planning for my project can be found **[here](https://github.com/divitjawa/Pi-Router-and-Pi-Hole-Application/blob/main/LAN%20Planning.md)**.
 
 Now, we will create the second .network file which will hold the address range that we selected in CIDR notation.
 
